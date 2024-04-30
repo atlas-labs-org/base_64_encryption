@@ -18,8 +18,6 @@ end
 -- Ensure the global encryption key is set correctly
 if encryptionKey == "" then
 	encryptionKey = generateRandomKey()
-
-	print("New Key Generated: "..encryptionKey)
 end
 
 -- Function to perform XOR on two binary strings of equal length
@@ -136,7 +134,6 @@ function Base64Module.base64Decode(encoded, key)
 	end
 	-- Ensure the bit stream is a multiple of 8 bits
 	if (#bitStream % 8) ~= 0 then
-		print(bitStream)
 		error("Invalid Base64 data, incomplete bit stream.")
 	end
 	local output = ""
